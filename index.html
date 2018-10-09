@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <title>车家号</title>
+    <meta name="keywords" content="车家号">
+    <meta name="description" content="车家号">
+    <meta name="author" content="车家号">
+    <link rel="shortcut icon" href="./static/img/favicon.ico">
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/flex.css">
+    <link rel="stylesheet" href="./static/css/swiper.min.css">
+    <script type="text/javascript" src="https://lsp-pc-web.oss-cn-beijing.aliyuncs.com/wap/static/js/vue.min..js"></script>
+    <script type="text/javascript" src="https://lsp-pc-web.oss-cn-beijing.aliyuncs.com/wap/static/js/vue-router.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+<!--  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <script>
+      eruda.init();
+  </script>-->
+  <script>
+    //修复ios10以上safari浏览器无法禁用缩放问题
+    window.onload=function(){
+        document.documentElement.addEventListener('touchstart', function (event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, false);
+        var lastTouchEnd = 0;
+        document.documentElement.addEventListener('touchend', function (event) {
+            var now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    }
+  </script>
+</html>
